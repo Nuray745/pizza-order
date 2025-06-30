@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/input.css" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="shadow-md">
+        <div class="max-w-[1450px] mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <img class="w-[120px]" src="img/logostar.jpg" alt="Logo">
+
+                    <div class="hidden md:flex gap-[30px] text-[18px] font-bold">
+                        <p onclick="navigate('html/menu.htm')" class="cursor-pointer">Menu</p>
+                        <p class="cursor-pointer">Rewards</p>
+                        <p class="cursor-pointer">Gift cards</p>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex gap-[50px] items-center">
+                    <p class="flex items-center gap-1 text-[18px] font-bold cursor-pointer">
+                        <i class="bi bi-geo-alt-fill"></i> Find a store
+                    </p>
+                    <div class="flex gap-[20px]">
+                        <button class="border border-black py-[5px] px-[20px] rounded-[15px]">Sign in</button>
+                        <button class="border border-black py-[5px] px-[20px] bg-black text-white rounded-[15px]">Join
+                            now</button>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()">
+                        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobileMenu" class="md:hidden mt-4 hidden">
+                <div class="flex flex-col gap-3 text-[18px] font-bold">
+                    <p onclick="navigate('html/menu.htm')" class="cursor-pointer">Menu</p>
+                    <p class="cursor-pointer">Rewards</p>
+                    <p class="cursor-pointer">Gift cards</p>
+                    <p class="flex items-center gap-1 text-[18px] font-bold cursor-pointer">
+                        <i class="bi bi-geo-alt-fill"></i> Find a store
+                    </p>
+                    <div class="flex flex-col gap-2 mt-2">
+                        <button class="border border-black py-[5px] px-[20px] rounded-[15px] w-full">Sign in</button>
+                        <button
+                            class="border border-black py-[5px] px-[20px] bg-black text-white rounded-[15px] w-full">Join
+                            now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="flex flex-col md:flex-row w-full h-auto md:h-[600px] max-w-[1450px] mx-auto px-4 py-4">
+            <div class="w-full md:w-1/2 h-[300px] md:h-full">
+                <img src="img/card sekil 1.webp" alt="Drinks" class="w-full h-full object-cover">
+            </div>
+
+            <div
+                class="w-full md:w-1/2 bg-[#2f3e2d] text-white flex flex-col justify-center items-center text-center px-6 py-12">
+                <h1 class="text-3xl md:text-[50px] font-bold mb-4">The Spring Edit</h1>
+                <p class="text-base md:text-[24px] font-bold mb-6">Fresh flavors, familiar joy.</p>
+                <button
+                    class="border border-white px-6 py-2 rounded-full hover:bg-white hover:text-[#2f3e2d] transition">
+                    View the menu
+                </button>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row w-full h-auto md:h-[400px] max-w-[1450px] mx-auto px-4 py-4">
+
+            <div
+                class="w-full md:w-1/2 bg-[#2f3e2d] text-white flex flex-col justify-center items-center text-center px-6 py-12">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Your first taste of Rewards is free</h1>
+                <p class="text-base md:text-lg mb-6">Unlock Rewards with your first order. Enjoy a free handcrafted
+                    drink when you make a qualifying purchase during your first week as a Starbucks® Rewards member.*
+                </p>
+                <button
+                    class="border border-white px-6 py-2 rounded-full hover:bg-white hover:text-[#2f3e2d] transition">
+                    Join now
+                </button>
+            </div>
+
+            <div class="w-full md:w-1/2 h-[300px] md:h-full">
+                <img src="img/card sekil 2.webp" alt="Drinks" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row w-full h-auto md:h-[600px] max-w-[1450px] mx-auto px-4 py-4">
+            <div class="w-full md:w-1/2 h-[300px] md:h-full">
+                <img src="img/card sekil 3.webp" alt="Drinks" class="w-full h-full object-cover">
+            </div>
+
+            <div
+                class="w-full md:w-1/2 bg-[#2f3e2d] text-white flex flex-col justify-center items-center text-center px-6 py-12">
+                <h1 class="text-3xl md:text-[50px] font-bold mb-4">Nondairy milk, no <br> extra charge</h1>
+                <p class="text-base md:text-[24px] font-bold mb-6">Customize your drink with your favorite <br> nondairy
+                    milk—like soy, coconut, almond or <br> oat—for no additional charge.</p>
+                <button
+                    class="border border-white px-6 py-2 rounded-full hover:bg-white hover:text-[#2f3e2d] transition">
+                    Order now
+                </button>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row w-full h-auto md:h-[600px] max-w-[1450px] mx-auto px-4 py-4">
+            <div
+                class="w-full md:w-1/2 bg-[#006242] text-white flex flex-col justify-center items-center text-center px-6 py-12">
+                <h1 class="text-3xl md:text-[50px] font-bold mb-4">More reasons to <br> stay awhile</h1>
+                <p class="text-base md:text-[24px] font-bold mb-6">Mugs, glasses and the condiment bar are <br> back—and
+                    get free refills of hot and iced <br> brewed coffee or tea.**</p>
+                <button
+                    class="border border-white px-6 py-2 rounded-full hover:bg-white hover:text-[#2f3e2d] transition">
+                    Learn more
+                </button>
+            </div>
+            <div class="w-full md:w-1/2 h-[300px] md:h-full">
+                <img src="img/card sekil 3.jpg" alt="Drinks" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="max-w-[1450px] mx-auto px-4 py-4">
+            <p class="text-center text-[14px]">*Valid for new Starbucks Rewards members for 7 days from sign up. Coupon
+                will be <br> available in the offers tab of your Starbucks app following sign up and may take up to 48
+                <br> hours to arrive. Good at participating U.S. stores for a handcrafted menu-sized beverage <br> with
+                qualifying purchase ($8 max value). Qualifying purchase excludes alcohol, Starbucks <br> Card and Card
+                reloads. Limit one. Cannot be combined with other offers or discounts. <br> Excludes delivery services.
+                Sign up before 6/29/2025.
+            </p>
+            <p class="text-center text-[14px] mt-[70px]">**Free refills of hot and iced brewed coffee or tea during same
+                store visit. Excludes Cold <br> Brew, Nitro Cold Brew, Iced Tea Lemonade, and flavored Iced Tea and
+                Starbucks Refreshers® <br> base. At participating stores. Visit http://starbucks.com/refills  to learn
+                more</p>
+        </div>
+        <div class="border-t border-gray-300">
+            <div class="max-w-[1450px] mx-auto px-4 py-4 md:grid md:grid-cols-5 gap-6">
+
+                <div class="space-y-2">
+                    <button onclick="toggleMenu('about')"
+                        class="w-full text-left text-[25px] font-bold md:cursor-default md:pointer-events-none">
+                        About Us
+                    </button>
+                    <div id="about" class="hidden md:block text-[18px] text-gray-500 space-y-2">
+                        <p>Our company</p>
+                        <p>Our Coffee</p>
+                        <p>About Starbucks</p>
+                        <p>Starbucks Archive</p>
+                        <p>Investor Relations</p>
+                        <p>Customer Service</p>
+                        <p>Contact us</p>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <button onclick="toggleMenu('careers')"
+                        class="w-full text-left text-[25px] font-bold md:cursor-default md:pointer-events-none">
+                        Careers
+                    </button>
+                    <div id="careers" class="hidden md:block text-[18px] text-gray-500 space-y-2">
+                        <p>Culture and Values</p>
+                        <p>Belonging at Starbucks</p>
+                        <p>College Achievement Plan</p>
+                        <p>Alumni Community</p>
+                        <p>U.S Careers</p>
+                        <p>International Careers</p>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <button onclick="toggleMenu('impact')"
+                        class="w-full text-left text-[25px] font-bold md:cursor-default md:pointer-events-none">
+                        Social Impact
+                    </button>
+                    <div id="impact" class="hidden md:block text-[18px] text-gray-500 space-y-2">
+                        <p>Communities</p>
+                        <p>Starbucks Foundation</p>
+                        <p>Sustainability</p>
+                        <p>Environmental and Social <br> Impact Reporting</p>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <button onclick="toggleMenu('business')"
+                        class="w-full text-left text-[25px] font-bold md:cursor-default md:pointer-events-none">
+                        For Business <br> Partners
+                    </button>
+                    <div id="business" class="hidden md:block text-[18px] text-gray-500 space-y-2">
+                        <p>Landlord Support Center</p>
+                        <p>Suppliers</p>
+                        <p>Corporate Gift Card Sales</p>
+                        <p>Office and Foodservice <br> Coffee</p>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <button onclick="toggleMenu('pickup')"
+                        class="w-full text-left text-[25px] font-bold md:cursor-default md:pointer-events-none">
+                        Order and Pick Up
+                    </button>
+                    <div id="pickup" class="hidden md:block text-[18px] text-gray-500 space-y-2">
+                        <p>Order on the App</p>
+                        <p>Order on the Web</p>
+                        <p>Delivery</p>
+                        <p>Order and Pick up Options</p>
+                        <p>Explore and Find Coffee <br> for Home</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="max-w-[1450px] mx-auto px-4 py-4 ">
+            <div class="flex gap-[15px] text-2xl">
+                <p href=""><i class="bi bi-facebook"></i></p>
+                <p href=""><i class="bi bi-pinterest"></i></p>
+                <p href=""><i class="bi bi-instagram"></i></p>
+                <p href=""><i class="bi bi-youtube"></i></p>
+                <p href=""><i class="bi bi-twitter-x"></i></p>
+            </div>
+            <div class="text-[16px] space-y-4 mt-[20px]">
+                <p>Privacy Notice</p>
+                <p>Consumer Health Privacy Notice</p>
+                <p>Terms of Use</p>
+                <p>Do Not Share My Personal Information</p>
+                <p>CA Supply Chain Act</p>
+                <p>Accessibility</p>
+                <p>Cookie Preferences</p>
+            </div>
+            <div class="text-[14px] mt-[20px] text-gray-500">
+                <p>© 2025 Starbucks Coffee Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./js/store.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+
+</html>

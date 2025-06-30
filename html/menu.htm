@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <!--   <div id="loader" class="bg-white hidden fixed left-0 top-0 w-screen h-screen">
+        <div class="w-10 h-10 border-4 border-gray-300 border-t-[#00754a] rounded-full animate-spin mx-auto mt-10"></div>
+    </div> -->
+   <header class="shadow-md">
+        <div class="max-w-[1450px] mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <img onclick="navigate('../index.htm')" class="w-[120px]" src="../img/logo.webp" alt="Logo">
+
+                    <div class="hidden md:flex gap-[30px] text-[18px] font-bold">
+                        <p onclick="navigate('html/menu.htm')" class="cursor-pointer">Menu</p>
+                        <p class="cursor-pointer">Rewards</p>
+                        <p class="cursor-pointer">Gift cards</p>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex gap-[50px] items-center">
+                    <p class="flex items-center gap-1 text-[18px] font-bold cursor-pointer">
+                        <i class="bi bi-geo-alt-fill"></i> Find a store
+                    </p>
+                    <div class="flex gap-[20px]">
+                        <button class="border border-black py-[5px] px-[20px] rounded-[15px]">Sign in</button>
+                        <button class="border border-black py-[5px] px-[20px] bg-black text-white rounded-[15px]">Join
+                            now</button>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()">
+                        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobileMenu" class="md:hidden mt-4 hidden">
+                <div class="flex flex-col gap-3 text-[18px] font-bold">
+                    <p onclick="navigate('html/menu.htm')" class="cursor-pointer">Menu</p>
+                    <p class="cursor-pointer">Rewards</p>
+                    <p class="cursor-pointer">Gift cards</p>
+                    <p class="flex items-center gap-1 text-[18px] font-bold cursor-pointer">
+                        <i class="bi bi-geo-alt-fill"></i> Find a store
+                    </p>
+                    <div class="flex flex-col gap-2 mt-2">
+                        <button class="border border-black py-[5px] px-[20px] rounded-[15px] w-full">Sign in</button>
+                        <button
+                            class="border border-black py-[5px] px-[20px] bg-black text-white rounded-[15px] w-full">Join
+                            now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="h-[50px] border-b-1 border-gray-300 bg-[#f9f9f9]">
+        <div class="max-w-[1270px] mx-auto px-4 py-4 flex gap-[30px] items-center ">
+            <p>Menu</p>
+            <p>Featured</p>
+            <p>Previous</p>
+            <p>Favorite</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="mt-0 md:mt-[50px] md:max-w-[1270px] mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row md:px-6 md:py-8 space-y-8 md:space-y-0 md:space-x-12">
+                <aside id="sidemenu" class="w-full md:w-1/4"></aside>
+                <div class="w-full md:w-3/4">
+                    <h1 class="text-3xl font-bold mb-[50px]">Menu</h1>
+
+                    <div id="mainmenu" class="grid grid-cols-1 sm:grid-cols-2 gap-8 "></div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <div class="fixed bottom-0 left-0 w-full h-[90px] bg-[#1f3933] text-white px-4 py-3 text-sm items-center ">
+        <div class="flex justify-around items-center text-[18px] ">
+            <div class="flex items-center gap-[20px]">
+                <div>
+                    <p class="mb-[5px]">For item availability</p>
+                    <p class="font-bold border-b border-white">Choose a store</p>
+                </div>
+                <div>
+                    <i class="bi bi-chevron-down text-[12px]"></i>
+                </div>
+            </div>
+            <div>
+                <i onclick="navigate('cart.htm')" class="bi bi-bag-fill text-[30px]"></i>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="border-t border-gray-300">
+            <div class="max-w-[1450px] mx-auto px-4 py-4 md:grid md:grid-cols-5 gap-6">
+
+                <div class="space-y-2">
+                    <button onclick="toggleMenu('about')"
+                        class="w-full text-left text-[25px] font-bold md:cursor-default md:pointer-events-none">
+                        About Us
+                    </button>
+                    <div id="about" class="hidden md:block text-[18px] text-gray-500 space-y-2">
+                        <p>Our company</p>
+                        <p>Our Coffee</p>
+                        <p>About Starbucks</p>
+                        <p>Starbucks Archive</p>
+                        <p>Investor Relations</p>
+                        <p>Customer Service</p>
+                        <p>Contact us</p>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <button onclick="toggleMenu('careers')"
+                        class="w-full text-left text-[25px] font-bold md:cursor-default md:pointer-events-none">
+                        Careers
+                    </button>
+                    <div id="careers" class="hidden md:block text-[18px] text-gray-500 space-y-2">
+                        <p>Culture and Values</p>
+                        <p>Belonging at Starbucks</p>
+                        <p>College Achievement Plan</p>
+                        <p>Alumni Community</p>
+                        <p>U.S Careers</p>
+                        <p>International Careers</p>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <button onclick="toggleMenu('impact')"
+                        class="w-full text-left text-[25px] font-bold md:cursor-default md:pointer-events-none">
+                        Social Impact
+                    </button>
+                    <div id="impact" class="hidden md:block text-[18px] text-gray-500 space-y-2">
+                        <p>Communities</p>
+                        <p>Starbucks Foundation</p>
+                        <p>Sustainability</p>
+                        <p>Environmental and Social <br> Impact Reporting</p>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <button onclick="toggleMenu('business')"
+                        class="w-full text-left text-[25px] font-bold md:cursor-default md:pointer-events-none">
+                        For Business <br> Partners
+                    </button>
+                    <div id="business" class="hidden md:block text-[18px] text-gray-500 space-y-2">
+                        <p>Landlord Support Center</p>
+                        <p>Suppliers</p>
+                        <p>Corporate Gift Card Sales</p>
+                        <p>Office and Foodservice <br> Coffee</p>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <button onclick="toggleMenu('pickup')"
+                        class="w-full text-left text-[25px] font-bold md:cursor-default md:pointer-events-none">
+                        Order and Pick Up
+                    </button>
+                    <div id="pickup" class="hidden md:block text-[18px] text-gray-500 space-y-2">
+                        <p>Order on the App</p>
+                        <p>Order on the Web</p>
+                        <p>Delivery</p>
+                        <p>Order and Pick up Options</p>
+                        <p>Explore and Find Coffee <br> for Home</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="max-w-[1450px] mx-auto px-4 py-4 ">
+            <div class="flex gap-[15px] text-2xl">
+                <p href=""><i class="bi bi-facebook"></i></p>
+                <p href=""><i class="bi bi-pinterest"></i></p>
+                <p href=""><i class="bi bi-instagram"></i></p>
+                <p href=""><i class="bi bi-youtube"></i></p>
+                <p href=""><i class="bi bi-twitter-x"></i></p>
+            </div>
+            <div class="text-[16px] space-y-4 mt-[20px]">
+                <p>Privacy Notice</p>
+                <p>Consumer Health Privacy Notice</p>
+                <p>Terms of Use</p>
+                <p>Do Not Share My Personal Information</p>
+                <p>CA Supply Chain Act</p>
+                <p>Accessibility</p>
+                <p>Cookie Preferences</p>
+            </div>
+            <div class="text-[14px] mt-[20px] text-gray-500">
+                <p>© 2025 Starbucks Coffee Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../js/store.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
